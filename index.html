@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #FB928E;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yesButton {
+            background-color: #ff69b4;
+            color: white;
+        }
+        #noButton {
+            background-color: #ff4500;
+            color: white;
+        }
+        #gifContainer {
+            display: none;
+            margin-top: 20px;
+        }
+        img{
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <img src="https://i.pinimg.com/originals/f6/91/f7/f691f7458dd37f942cdfec33237fb30b.gif" alt="hugging Cats" >
+    
+    <h1>Will You Be My Valentine?</h1>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+    <div id="gifContainer">
+        <img src="https://i.pinimg.com/originals/14/8b/de/148bde6c11bf177b0cad64fc4fa0c696.gif" alt="Hugging Cats" width="500">
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const gifContainer = document.getElementById('gifContainer');
+
+        noButton.addEventListener('mouseover', () => {
+            const randomX = Math.floor(Math.random() * 80) + 10; // Random position
+            const randomY = Math.floor(Math.random() * 80) + 10; // Random position
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + '%';
+            noButton.style.top = randomY + '%';
+        });
+
+        noButton.addEventListener('click', () => {
+            const randomX = Math.floor(Math.random() * 80) + 10; // Random position
+            const randomY = Math.floor(Math.random() * 80) + 10; // Random position
+            noButton.style.position = 'absolute';
+            noButton.style.left = randomX + '%';
+            noButton.style.top = randomY + '%';
+        });
+
+        document.getElementById('yesButton').addEventListener('click', () => {
+            gifContainer.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
